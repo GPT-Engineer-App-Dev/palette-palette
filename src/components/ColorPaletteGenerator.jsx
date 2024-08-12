@@ -12,17 +12,17 @@ const ColorPaletteGenerator = () => {
   return (
     <Card className="w-[400px]">
       <CardHeader>
-        <CardTitle>Color Palettes</CardTitle>
+        <CardTitle>Color Palette Generator</CardTitle>
       </CardHeader>
       <CardContent>
-        <Tabs defaultValue="fodong">
+        <Tabs defaultValue="current">
           <TabsList className="grid w-full grid-cols-3">
-            <TabsTrigger value="lise-mud">Lise Mud</TabsTrigger>
-            <TabsTrigger value="fodong">Fodong</TabsTrigger>
-            <TabsTrigger value="copy-hite-the-yow">Copy hite the Yow</TabsTrigger>
+            <TabsTrigger value="current">Current</TabsTrigger>
+            <TabsTrigger value="saved">Saved</TabsTrigger>
+            <TabsTrigger value="explore">Explore</TabsTrigger>
           </TabsList>
-          <TabsContent value="fodong">
-            <ColorPalette name="Joung Venic" colors={currentPalette} />
+          <TabsContent value="current">
+            <ColorPalette name="Current Palette" colors={currentPalette} />
             <PaletteOptions />
           </TabsContent>
         </Tabs>

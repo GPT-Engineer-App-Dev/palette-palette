@@ -13,41 +13,43 @@ import { Switch } from "@/components/ui/switch";
 const PaletteOptions = () => {
   return (
     <div>
-      <h3 className="text-lg font-semibold mb-2">Also Color</h3>
+      <h3 className="text-lg font-semibold mb-2">Palette Options</h3>
       <div className="space-y-4">
         <div className="flex space-x-2">
-          <Input className="flex-grow" placeholder="Larg moet" />
+          <Input className="flex-grow" placeholder="Enter a color (e.g., #FF5733)" />
           <Select>
             <SelectTrigger className="w-[180px]">
-              <SelectValue placeholder="Paner" />
+              <SelectValue placeholder="Color Format" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="paner">Paner</SelectItem>
+              <SelectItem value="hex">Hex</SelectItem>
+              <SelectItem value="rgb">RGB</SelectItem>
+              <SelectItem value="hsl">HSL</SelectItem>
             </SelectContent>
           </Select>
         </div>
         <div className="flex justify-between items-center">
-          <span>Colors</span>
+          <span>Lock Colors</span>
           <div className="flex items-center space-x-2">
-            <span>Lesk</span>
+            <span>Off</span>
             <Switch />
-            <span className="text-blue-500">bNow</span>
+            <span className="text-blue-500">On</span>
           </div>
         </div>
         <div className="flex justify-between items-center">
-          <span>Tpes</span>
+          <span>Dark Mode</span>
           <Switch />
         </div>
         <div className="flex justify-between items-center">
-          <span>Pouck</span>
+          <span>Accessibility Check</span>
           <Switch />
         </div>
         <div className="grid grid-cols-2 gap-2">
-          <Button variant="outline">Runhl</Button>
-          <Button variant="outline">Car</Button>
-          <Button variant="outline">Fheking Mai</Button>
-          <Button variant="outline">Dectnoer Dare</Button>
-          <Button variant="outline">Sble, SI</Button>
+          <Button variant="outline">Generate Random</Button>
+          <Button variant="outline">Save Palette</Button>
+          <Button variant="outline">Copy All Colors</Button>
+          <Button variant="outline">Export Palette</Button>
+          <Button variant="outline">Color Theory</Button>
         </div>
       </div>
     </div>
